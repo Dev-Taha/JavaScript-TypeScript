@@ -48,8 +48,7 @@ var Directions;
     Directions[Directions["west"] = 1] = "west";
     Directions[Directions["east"] = 2] = "east";
     Directions[Directions["north"] = 3] = "north";
-})(Directions || (Directions = {}));
-;
+})(Directions || (Directions = {})); // index 2
 var dire = Directions.east;
 console.log(dire);
 var Direction;
@@ -58,8 +57,52 @@ var Direction;
     Direction["west"] = "west";
     Direction["east"] = "east";
     Direction["north"] = "north";
-})(Direction || (Direction = {}));
-;
+})(Direction || (Direction = {})); // with values
 var dire2 = Direction.east;
 console.log(dire2);
-// let agent = new Agent("taha", 16, 30, "myemail", 21);
+var emp = {
+    salary: 120,
+    name: 'taha',
+    year: 3030,
+    model: 'hrker'
+};
+var myCar = {
+    name: "Marcedes",
+    year: 2002,
+    model: "2022",
+};
+console.log(myCar); // output => as an object
+var PersonName;
+PersonName = "taha";
+console.log(PersonName);
+var p2 = { name: "Alex" };
+console.log(p2); // output here as an obejct
+var p3 = "Ahmed";
+console.log(p3); // output here as a property
+console.log(emp);
+function myFunction(name, email, age) {
+    this.name = name;
+    this.email = email;
+    this.age = age;
+}
+var func = new myFunction('taha', 'taha@devtaha.fts', 22); // functional constructore
+console.log(func.name);
+console.log(func);
+function getData(values) {
+    this.url = values.url;
+    this.from = values.from;
+    this.data = values.data;
+}
+var data = new getData({ url: 'https://jsonplaceholder.typicode.com/users', from: 'web', data: 'users data' });
+console.log(data);
+function myFinc2() {
+    return { name: 'ali', email: 'ali.bou@gmail.com' };
+}
+console.log(myFinc2());
+function getInformation(data) {
+    this.name = data.name;
+    this.age = data.age;
+    this.emial = data.email;
+}
+var x = new getInformation({ name: 'malek', age: 52, email: 'email' });
+console.log(x);
